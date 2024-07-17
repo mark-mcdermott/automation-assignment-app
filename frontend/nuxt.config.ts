@@ -1,10 +1,11 @@
+let development = process.env.NODE_ENV !== 'production'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/scss/main.scss'],
   modules: ['@nuxt/icon', '@sidebase/nuxt-auth'],
   devServer: { port: 3001 },
   auth: {
-    computed: { "pathname": "http://localhost:3000/api/auth/" },
+    computed: { pathname: development ? "http://localhost:3000/api/auth/" : "https://interview-app-backend.fly.dev/api/auth/" },
     isEnabled: true,
     globalAppMiddleware: { isEnabled: true },
     provider: {
