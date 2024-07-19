@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for automation-assignment-app-backend on 2024-07-16T23:29:51-05:00
+# fly.toml app configuration file generated for automation-assignment-app-backend on 2024-07-19T01:19:04-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -13,7 +13,7 @@ console_command = '/rails/bin/rails console'
   RAILS_STORAGE = '/data'
 
 [[mounts]]
-  source = 'ruxtmin_data'
+  source = 'automation_assignment_app_data'
   destination = '/data'
 
 [http_service]
